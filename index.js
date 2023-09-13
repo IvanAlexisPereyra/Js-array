@@ -24,13 +24,7 @@ const pizzas = [
     id: 4,
     nombre: "pizza 4 Quesos",
     precio: 1380,
-    ingredientes: [
-      "Muzzarella",
-      "Tomate",
-      "Queso Azul",
-      "Parmesano",
-      "Roquefort",
-    ],
+    ingredientes: ["Muzzarella", "Tomate", "Queso Azul", "Parmesano", "Roquefort"],
   },
 
   {
@@ -47,3 +41,35 @@ const pizzas = [
     ingredientes: ["Muzzarella", "Tomate", "Anana"],
   },
 ];
+
+// a)
+
+pizzas.forEach((pizzas) => {
+  if(pizzas.id % 2 === 1){
+    console.log("La", pizzas.nombre, "tiene un id impar.")
+  }
+})
+
+//b)
+
+pizzas.forEach((pizzas) => {
+  if(pizzas.precio < 600){
+    console.log("La", pizzas.nombre, "tiene un precio menor a 600.")
+  }
+})
+
+//c)
+
+pizzas.forEach((pizzas) => {
+  console.log("La", pizzas.nombre, "tiene un precio de", pizzas.precio)
+})
+
+//d)
+
+pizzas.forEach((pizza) => {
+  console.log("la", pizza.nombre, "tiene los siguientes ingredientes:")
+  const ingredientes = pizza.ingredientes
+  ingredientes.forEach((ingrediente) => {
+    console.log(ingrediente);
+  })
+})
